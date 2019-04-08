@@ -102,6 +102,7 @@ axios.get('https://cloud.minapp.com/userve/v2.0/miniapp/user_profile/36619758/')
   "created_at": 1504504504,
   "gender": 1,
   "nickname": "PCG",
+  "name": "jack",
   "openid": "onzns0KsLKFyg3-VcW0GwTE652_k",
   "unionid": "onzns0KsLKFyg3-VcW0GwTE652_k",
   "province": "Guangdong",
@@ -111,3 +112,57 @@ axios.get('https://cloud.minapp.com/userve/v2.0/miniapp/user_profile/36619758/')
   "user_id": 36619758
 }
 ```
+
+## 更新用户信息
+
+**接口**
+
+`PUT https://cloud.minapp.com/userve/v2.0/miniapp/user_profile/{{user_id}}/`
+
+其中 `user_id` 即用户 ID
+
+**代码示例**
+
+```js
+var axios = require('axios').create({
+  withCredentials: true
+})
+
+axios.put('https://cloud.minapp.com/userve/v2.0/miniapp/user_profile/36619758/', {
+  name: 'tom'
+})
+.then(res => {
+  console.log(res.data)
+})
+```
+
+**返回示例**
+
+```json
+{
+  "avatar": "https://media.ifanrusercontent.com/media/tavatar/55/c3/55c3dbebcc61891be10d29ded808c84a01dcf864.jpg",
+  "city": "Guangzhou",
+  "country": "China",
+  "created_at": 1504504504,
+  "gender": 1,
+  "nickname": "PCG",
+  "name": "tom",
+  "openid": "onzns0KsLKFyg3-VcW0GwTE652_k",
+  "unionid": "onzns0KsLKFyg3-VcW0GwTE652_k",
+  "province": "Guangdong",
+  "user_group": [
+      137
+  ],
+  "user_id": 36619758
+}
+```
+
+**状态码说明**
+
+`200`: 成功。
+
+`400`: 字段类型不匹配，更新非自定义字段或不存在的字段。
+
+`401`: 未授权。
+
+`404`: 用户不存在。
