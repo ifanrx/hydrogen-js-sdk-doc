@@ -11,6 +11,13 @@
 | merchandiseDescription | String  | Y   | 微信支付凭证-商品详情的内容 |
 | merchandiseSchemaId    | String  | N   | 商品数据表 ID，可用于定位用户购买的物品 |
 | merchandiseRecordId    | String  | N   | 商品数据行 ID，可用于定位用户购买的物品 |
+| merchandiseSnapshot    | Object  | N   | 根据业务需求自定义的数据 |
+| profitSharing          | Boolean | N   | 当前订单是否需要分账。分账操作，请查看[微信直连商户分账](/cloud-function/node-sdk/order.html#微信直连商户分账) |
+
+> **info**
+> 分账功能仅商用版及商用版以上版本可以使用。
+
+<!-- 分隔两个 info -->
 
 > **info**
 > 举例：开发者有一个 Article 表, 里面有免费 / 付费的文章, 当用户对一篇付费文章进行支付时, 则可以将 Article 表的 ID 作为 `merchandiseSchemaId`, 文章记录的 ID 作为你 `merchandiseRecordId` 传入到 `WechatComponent.pay(...)` 写进支付订单记录。当用户阅读此付费文章时, 则可以通过 `merchandiseSchemaId`, `merchandiseRecordId` 来查询用户是否付费。
