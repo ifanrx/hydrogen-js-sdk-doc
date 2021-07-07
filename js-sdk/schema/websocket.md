@@ -213,6 +213,7 @@ err 对象结构请参考[错误码和 HError 对象](/js-sdk/error-code.md)
 | number   | =, >, >=, <, <=, !=                                                             | -    |
 | boolean  | =, !=                                                                           | -    |
 | date     | =, >, >=, <, <=, !=                                                             | -    |
+| array    | contains                                                                        | 目前只支持数组类型为 string 的包含查询，其他类型会报错    |
 
 
 **请求示例**
