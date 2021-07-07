@@ -11,7 +11,7 @@
 > **info**
 > 使用实时数据库功能前需要先进行[登录操作](/js-sdk/auth.md#登录)
 
-1.通过 `tableName` 或 `tableID` 实例化一个 `TableObject` 对象，操作该对象即相当于操作对应的数据表，这里推荐用 tableName
+1.通过 `tableName` 实例化一个 `TableObject` 对象，操作该对象即相当于操作对应的数据表，这里推荐用 tableName
 
 {% ifanrxCodeTabs %}
 `let MyTableObject = new wx.BaaS.TableObject(tableName)`
@@ -19,12 +19,9 @@
 
 **参数说明**
 
-tableName 和 tableID 二选一，不能同时存在
-
 | 名称     | 类型   | 必填   | 说明                   |
 | :-----  | :----- | :---- | :--- |
-| tableID   | Number | 是  | 数据表的 ID             |
-| tableName | String |  是 | 数据表名（SDK >= 1.2.0） |
+| tableName | String |  是 | 数据表名 |
 
 > **info**
 > 实时数据库功能无法订阅内置数据表，如 _userprofile 表、_richtextcontent 表等

@@ -240,6 +240,7 @@
         * [查询数据列表](flutter-sdk/schema/query.md)
         * [分页和排序](flutter-sdk/schema/limit-and-order.md)
         * [地理位置操作](flutter-sdk/schema/geo.md)
+        * [实时数据库(WebSocket)](flutter-sdk/schema/websocket.md)
         * [字段过滤与扩展](flutter-sdk/schema/select-and-expand.md)
         * [数据表操作常见错误](flutter-sdk/schema/operate-error.md)
     * [内容库](flutter-sdk/content/README.md)
